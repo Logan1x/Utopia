@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Questrial&display=swap");
 
-@import url("./installation.css");
+@import url("./utility.css");
+@import url("./themes.css");
 
 :root {
   --color-primary: #10b981;
@@ -9,30 +10,8 @@
   --color-white: #ffffff;
   --color-foreground: #fafaf9;
   --color-background: #111827;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Questrial", sans-serif;
-  font-size: 16px;
-  color: var(--color-foreground);
-  background: var(--color-background);
-  margin: auto;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  --card-bg: #374151;
+  --color-danger: #ff0000;
 }
 
 .container-main {
@@ -45,6 +24,20 @@ a:hover {
     "header "
     "main "
     "footer ";
+}
+
+.btn {
+  border: none;
+  border-radius: 0.2rem;
+  background-color: var(--color-primary);
+  color: var(--color-foreground);
+  margin: 0.8rem;
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
 }
 
 .nav {
