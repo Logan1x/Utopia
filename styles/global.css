@@ -2,6 +2,8 @@
 
 @import url("./utility.css");
 @import url("./themes.css");
+@import url("./question.css");
+@import url("./results.css");
 
 :root {
   --color-primary: #10b981;
@@ -14,12 +16,16 @@
   --color-danger: #ff0000;
 }
 
+body {
+  line-height: 1.2;
+}
+
 .container-main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr 30px;
   height: 100vh;
-  max-width: 950px;
+  max-width: 1050px;
   grid-template-areas:
     "header "
     "main "
@@ -55,6 +61,10 @@
   cursor: pointer;
 }
 
+.rotate {
+  transform: rotate(45deg) perspective(0);
+}
+
 .nav-title a {
   color: var(--color-foreground);
 }
@@ -79,6 +89,18 @@
   text-align: center;
   grid-area: main;
   margin: auto 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero-image {
+  width: 400px;
+  height: auto;
+}
+
+.hero-content {
+  text-align: left;
 }
 
 .hero-title {
@@ -145,48 +167,10 @@ footer .text-highlight a {
     "footer footer";
 }
 
-aside {
-  grid-area: aside;
-  background: var(--color-background);
-  color: var(--color-secondary);
-  /* border: 1px solid; */
-  font-size: small;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
+/* quiz question */
 
-/* scrollbar */
-
-aside::-webkit-scrollbar {
-  width: 3px;
-}
-
-aside::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.sidebar-lists {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: auto 0.5rem;
-}
-
-.sidebar-lists a {
-  margin: 0.5rem 0rem;
-  color: var(--color-secondary);
-}
-
-.sidebar-lists a:hover {
-  color: var(--color-primary);
-}
-
-.sidebar-lists .sidebar-title {
-  font-weight: bold;
-  margin: 0.5rem 0;
-  padding: 0.5rem 0rem;
-  border-bottom: 1px solid;
+.question-body {
+  margin: 2rem 0rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -200,7 +184,11 @@ aside::-webkit-scrollbar-track {
       "footer";
   }
 
-  aside {
-    display: none;
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-content {
+    text-align: center;
   }
 }
