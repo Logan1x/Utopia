@@ -19,9 +19,6 @@
   margin: 0.3rem;
   height: auto;
 }
-.card:hover {
-  /* cursor: pointer; */
-}
 
 .card-img {
   width: 230px;
