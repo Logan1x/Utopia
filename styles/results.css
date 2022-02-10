@@ -1,0 +1,17 @@
+.result-container {
+  max-width: 650px;
+  margin: 0rem auto;
+  text-align: center;
+}
+
+.result-title {
+  margin: 1.5rem 0rem;
+}
+
+.choice-right {
+  background-color: var(--color-primary);
+}
+
+.choice-wrong {
+  background-color: var(--color-danger);
+}
