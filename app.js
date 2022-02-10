@@ -1,5 +1,3 @@
-console.log("Hello World");
-
 const modal = document.getElementById("modal");
 const modalBtn = document.querySelectorAll(".modalBtn");
 const closeBtn = document.getElementById("closeModal");
