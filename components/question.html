@@ -10,62 +10,37 @@
       crossorigin="anonymous"
     ></script>
     <title>Quiz | Utopia</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body class="container-main">
-    <nav class="nav">
-      <p class="nav-title">
-        <a href="/"> ⚡ Utopia </a><span class="text-sm">v1.0</span>
-      </p>
-      <div class="nav-pills">
-        <a href="#">Docs</a>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
-    </nav>
+    <nav class="nav"></nav>
     <main class="quiz-container">
-      <h2 class="quiz-title">Quiz Themes</h2>
-      <p class="quiz-subtitle">Choose any theme from below cards</p>
-      <div class="theme-cards">
-        <div class="card">
-          <img src="../assets/harry-potter.jpg" class="card-img" alt="" />
-          <div class="card-content">
-            <h2 class="card-heading">Potterheads Quiz</h2>
-            <p class="card-text">
-              Wingardium Leviousa your way to the quiz that tests your knowledge
-              on the wizarding world!
-            </p>
-            <button class="btn card-btn modalBtn">Start Now!!</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="../assets/mandalorian.jpg" class="card-img" alt="" />
-          <div class="card-content">
-            <h2 class="card-heading">Mandalorian Quiz</h2>
-            <p class="card-text">
-              Attempting the quiz is the way to meet Grogu and the Mandalorian.
-            </p>
-            <button class="btn card-btn modalBtn">Start Now!!</button>
-          </div>
-        </div>
+      <h2 class="quiz-title">Potterheads Quiz</h2>
+      <div class="quiz-info">
+        <p>Question: 1/5</p>
+        <p>Score: 0</p>
       </div>
-      <div class="show-modal modal" id="modal">
-        <div class="modal-body">
-          <h2>
-            There are some sules, you should follow before you go wandering
-          </h2>
-          <p>1. You can only attempt the quiz once.</p>
-          <p>2. You can't go back to the quiz after you've attempted it.</p>
-          <p>3. You can't go back to the quiz after you've attempted it.</p>
-          <div>
-            <button class="btn card-btn">Start the quiz?</button>
-            <button class="btn card-btn btn-danger" id="closeModal">
-              Go Back
-            </button>
-          </div>
+      <div class="question-body">
+        <p class="quiz-question">
+          First things first an easy one, what is the name of the first book?
+        </p>
+        <div class="quiz-options">
+          <div class="quiz-card">Harry Potter</div>
+          <div class="quiz-card">Harry Potter and the Philosopher's Stone</div>
+          <div class="quiz-card">Harry Potter and the Chamber of Secrets</div>
+          <div class="quiz-card">Harry Potter and the Prisoner of Azkaban</div>
+        </div>
+        <div class="quiz-question-next">
+          <a href="./results.html"
+            >Next <span><i class="fas fa-chevron-right"></i></span
+          ></a>
         </div>
       </div>
     </main>
+    <script src="../nav.js"></script>
   </body>
 </html>

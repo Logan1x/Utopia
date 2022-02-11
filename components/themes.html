@@ -10,19 +10,14 @@
       crossorigin="anonymous"
     ></script>
     <title>Utopia</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body class="container-main">
-    <nav class="nav">
-      <p class="nav-title">
-        <a href="/"> ⚡ Utopia </a><span class="text-sm">v1.0</span>
-      </p>
-      <div class="nav-pills">
-        <a href="#">Docs</a>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-twitter"></i>
-      </div>
-    </nav>
+    <nav class="nav"></nav>
     <main class="theme-container">
       <h2 class="theme-title">Quiz Themes</h2>
       <p class="theme-subtitle">Choose any theme from below cards</p>
@@ -53,13 +48,21 @@
       <div class="show-modal modal" id="modal">
         <div class="modal-body">
           <h2>
-            There are some sules, you should follow before you go wandering
+            There are some rules, you should follow before you go wandering
           </h2>
-          <p>1. You can only attempt the quiz once.</p>
-          <p>2. You can't go back to the quiz after you've attempted it.</p>
-          <p>3. You can't go back to the quiz after you've attempted it.</p>
+          <div class="model-text-left">
+            <p>1. You can only attempt the quiz once.</p>
+            <p>2. You can't go back to the quiz after you've attempted it.</p>
+            <p>
+              3. If you are found cheating using any source, you'll be discarded
+              from future quizes.
+            </p>
+          </div>
+
           <div>
-            <button class="btn card-btn">Start the quiz?</button>
+            <button class="btn card-btn">
+              <a href="./question.html"> Start the quiz?</a>
+            </button>
             <button class="btn card-btn btn-danger" id="closeModal">
               Go Back
             </button>
@@ -67,6 +70,21 @@
         </div>
       </div>
     </main>
-    <script src="../app.js"></script>
+    <script>
+      const modal = document.getElementById("modal");
+      const modalBtn = document.querySelectorAll(".modalBtn");
+      const closeBtn = document.getElementById("closeModal");
+
+      modalBtn.forEach((item) => {
+        item.addEventListener("click", function () {
+          modal.classList.toggle("show-modal");
+        });
+      });
+
+      closeBtn.addEventListener("click", function () {
+        modal.classList.toggle("show-modal");
+      });
+    </script>
+    <script src="../nav.js"></script>
   </body>
 </html>
