@@ -14,25 +14,9 @@ This project is made out of HTML,CSS, and VanillaJS and **if you love to contrib
 </div>  
 
 ## Tech Stack
-   **FrontEnd**: ReactJS
-   
-   **Additional NPM Libraries**
-   - react-helmet
-   - react-icons
-   - react-router-dom
-   - react-toastify
-   - react-link-preview
-   - react-scripts
-   - firebase
-  
-   **Styling** :  TailwindCSS
-     
-   **DataBase** : Firebase
-        
-   **Authentication** : Firebase
-
-## Functionality
-- Upload a Bookmark and get bookmark tile generated on dashboard. You can sort them by different tags.
+- Html5
+- Css3
+- Vanilla Javascript
 
 <div align="center">
         
